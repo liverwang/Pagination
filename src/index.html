@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pagination</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.css" rel="stylesheet">
+
+  <link href="./pagination/pagination.css" rel="stylesheet"></link>
+  <script src="./pagination/pagination.js"></script>
+  <style>
+    .page-container {
+      margin: 20px 0;
+    }
+
+    .card {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row ">
+      <div class="page-container"></div>
+    </div>
+    <div class="row page-list">
+      <div class="col-md-3">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card-text,card-text,card-text,card-text</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card-text,card-text,card-text,card-text</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card-text,card-text,card-text,card-text</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">card-text,card-text,card-text,card-text</p>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="page-container"></div>
+    </div>
+  </div>
+
+  <script>
+    const pageSize = 10
+    const dataCount = 95
+    const pager = new Pagination('.page-container', {
+      pageSize: pageSize,
+      autoLoad: true,
+      unit: '条',
+      toPage: function (index, _pageSize =  pageSize) {
+        // 设置记录总数，用于生成分页HTML内容
+        if (index === 0 || _pageSize) this.updateCount(dataCount, _pageSize)
+
+        let pageListHtml = ''
+        for(var i = 0; i< _pageSize;i++){
+          pageListHtml += `
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title - ${index * _pageSize + i + 1}</h5>
+                  <p class="card-text">card-text,card-text,card-text,card-text</p>
+                </div>
+              </div>
+            </div>
+          `
+        }
+        console.log(pageListHtml)
+        $('.page-list').html(pageListHtml)
+      }
+    })
+  </script>
+</body>
+
+</html>

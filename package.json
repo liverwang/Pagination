@@ -1,0 +1,19 @@
+{
+  "name": "pagination",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liverwang/Pagination.git"
+  },
+  "author": "wyl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liverwang/Pagination/issues"
+  },
+  "homepage": "https://github.com/liverwang/Pagination#readme"
+}
