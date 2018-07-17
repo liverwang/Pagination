@@ -16,6 +16,10 @@
   line-height: 24px
 }
 
+.page .page-item.hide{
+  display: none;
+}
+
 .page-first,.page-item,.page-last,.page-more {
   height: 32px;
   width: 32px;
@@ -27,28 +31,34 @@
 
 .page-first, .page-last{
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABcUlEQVRYR+3Wv0vDQBQH8PcCEiWCm5t/RXEwIu2gpAElWbJqQBAUXPw/HN1KMf4DVm3aiEX8N1R0cRLcuiUpTxKwiqJ9uVy8pVnz4/vJ3bt3h6D4QsX5MAWwRsBy/DUNqUUALxrSQe/87EHW1LEATcePEMHKQwlek1QzB2H7WQaCB3B3Wgi4Ow6UiGABGp43Pxsb14hgykawAFnoiufNLcTGQDaCDagKUQhQBaIwYIxIjB4CNMrWhBAgC7XtQ530YVQWIQyQhSgF+AsBSKv9TvA0qVmVBnwgQB9eAcDGZyB1+51g618AtdrezOJSHH4FEFEYXQSblQOyYvzx90Rv6QjNm+7pY6WA31YCkVaPLtv3k8Kz+8I1oHQZ5vuCqkYke1MqNAWywwvVQFVnAtYI5OGJcYsAy2U3n+8rgwVouv4xAhzJDmdPge36dwBQV3YotZztdQ3xJDuWj1Lc53Q4ThNijwD3YyLPsWpA5MPcd6aAd3uY6yHvR4KoAAAAAElFTkSuQmCC');
-  background-size: 25px 25px;
+  background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat no-repeat;
 }
+
 .page-first{
   transform: rotate(180deg);
 }
 
-.page-first.active,.page-first:hover,.page-item.active,.page-item:hover,.page-last.active,.page-last:hover,.page-more.active,.page-more:hover {
+.page-item.active,.page-item:hover,.page-more.active,.page-more:hover {
   color: #fff;
-  background: #ae6b38;
+  background-color: #ae6b38;
   opacity: .6008
 }
 
+.page-first:hover,.page-last:hover {
+  opacity: .6008;
+  background-color: #fff;
+}
+
 .page-first.disable,.page-last.disable {
-  color: #bbbec4
+  color: #bbbec4;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABVUlEQVRYR+3WP0rEQBQG8G8YRARPkSFzA5uIrIVio6ew0tJ7WNrtLXRFQcRr6CNpUhkski5N8mQgC8ui7ksyY5pNmz/fLzPvzYzCxJeaOB9bgGgEsiw7appmzsy51vraGPPha+pEACJ6AnDWhX4yc2KtzXwgpIA5gMuVQG8IEaAoiv2qqp4BJL4RIoALzfN8r67rF98IMSAUohcgBKI3YAXxCOB4bE0MArhQItoF4NpzFGIwwBdiFOAvBIDDOI7TTYvVaMASwcz3SqnTZSAzP1hrL/4FwMw7RLRYAyystefBAa4Yf/j7L611YoyhoIDfOkFrPYui6H1TuLs/uAYmbcNuX5hmIfK9KfWaAt/hvWog1JlANAIuvCzLV6XUwdjNZ70zRAAiugVw4ztcPAVE9AZgNtmhNE3Tk7Zt77pj+ZVkhZMsQuIRkH5syHOiGhjyYek7W8A3kqX9IZmYSrEAAAAASUVORK5CYII=');
 }
 
 .page-first.disable.active,.page-first.disable:hover,.page-last.disable.active,.page-last.disable:hover {
-  color: #bbbec4;
-  background: #fff;
-  opacity: 1
+  opacity: 1;
+  background-color: #fff;
 }
 
 .page-options {

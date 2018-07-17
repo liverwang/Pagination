@@ -73,24 +73,23 @@
       pageSize: pageSize,
       autoLoad: true,
       unit: '条',
-      toPage: function (index, _pageSize =  pageSize) {
+      toPage: function (index, _pageSize) {
         // 设置记录总数，用于生成分页HTML内容
         if (index === 0 || _pageSize) this.updateCount(dataCount, _pageSize)
 
         let pageListHtml = ''
-        for(var i = 0; i< _pageSize;i++){
+        for(var i = 0; i< (_pageSize || pageSize);i++){
           pageListHtml += `
             <div class="col-md-3">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Card title - ${index * _pageSize + i + 1}</h5>
+                  <h5 class="card-title">Card - ${index * (_pageSize || pageSize) + i + 1}</h5>
                   <p class="card-text">card-text,card-text,card-text,card-text</p>
                 </div>
               </div>
             </div>
           `
         }
-        console.log(pageListHtml)
         $('.page-list').html(pageListHtml)
       }
     })
