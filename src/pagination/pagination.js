@@ -8,6 +8,7 @@ var Pagination = (function() {
     this.dataCount = 0
     this.unit = '条'
     this.pageSizeOptions = [10, 20, 30, 40]
+    this.handleToPage = this._handleToPage
 
     if (options) {
       this.pageSize = options.pageSize
