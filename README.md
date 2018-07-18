@@ -60,3 +60,10 @@ const pager = new Pagination('.page-container', {
 ```
 
 5. 查看效果：[JavaScript分页组件](https://liverwang.github.io/Pagination/src/index.html)
+
+# 兼容性
+> chrome
+> firefox
+> safari
+> edge
+> ie9以上
